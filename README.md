@@ -1,10 +1,10 @@
-# í½” Restaurant Management System
+# ğŸ” Restaurant Management System
 
 A Django-based Restaurant Management Web Application where users can browse food menus, add food to cart, book tables, and submit feedback.
 
 --------------------------------------------------
 
-íº€ Features
+ğŸš€ Features
 
 â€¢ User Signup & Login  
 â€¢ Food Menu Browsing  
@@ -18,7 +18,7 @@ A Django-based Restaurant Management Web Application where users can browse food
 
 --------------------------------------------------
 
-í»  Tech Stack
+ğŸ›  Tech Stack
 
 Backend  
 Python  
@@ -35,7 +35,7 @@ SQLite
 
 --------------------------------------------------
 
-í³¦ Modules
+ğŸ“¦ Modules
 
 Authentication Module  
 Menu Management Module  
@@ -47,7 +47,7 @@ Admin Dashboard
 
 --------------------------------------------------
 
-í·„ Database Models
+ğŸ—„ Database Models
 
 User  
 ItemList  
@@ -58,7 +58,7 @@ Cart
 
 --------------------------------------------------
 
-í³Š System Flow
+ğŸ“Š System Flow
 
 User â†’ Frontend (HTML/CSS/JS) â†’ Django Views â†’ Models â†’ SQLite Database
 
@@ -97,7 +97,7 @@ http://127.0.0.1:8000
 
 --------------------------------------------------
 
-í³Œ Future Scope
+ğŸ“Œ Future Scope
 
 â€¢ Online Payment Integration  
 â€¢ Order Tracking System  
@@ -107,57 +107,8 @@ http://127.0.0.1:8000
 
 --------------------------------------------------
 
-í±¨â€í²» Author
+ğŸ‘¨â€ğŸ’» Author
 
 Ankit Kumar  
 MCA Student  
-Python & Django Developer# Restaurant Management System
-
-A Django based Restaurant Management Web Application.
-
-## Features
-- User Authentication (Login / Signup)
-- Food Menu Browsing
-- Category Filtering
-- Add to Cart
-- Table Booking
-- Email Confirmation
-- Feedback Submission
-- User Dashboard
-- Admin Dashboard
-
-## Tech Stack
-- Python
-- Django
-- HTML
-- CSS
-- Bootstrap
-- JavaScript
-- SQLite
-
-## Modules
-- Authentication
-- Menu System
-- Cart System
-- Table Booking
-- Feedback System
-- User Dashboard
-- Admin Dashboard
-
-## Run Project
-
-Clone repo
-
-git clone https://github.com/Ankit-kumar7061/restaurant-management-system.git
-
-Install requirements
-
-pip install -r requirements.txt
-
-Run migrations
-
-python manage.py migrate
-
-Run server
-
-python manage.py runserver
+Python & Django Developer
