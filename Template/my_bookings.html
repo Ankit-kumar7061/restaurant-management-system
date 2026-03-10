@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>My Bookings</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+
+<style>
+
+body{
+background:#f5f5f5;
+}
+
+.container{
+margin-top:50px;
+}
+
+.card{
+border-radius:10px;
+box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+.table th{
+background:#343a40;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="card-header text-center bg-dark text-white">
+
+<h3>My Table Bookings</h3>
+
+</div>
+
+<div class="card-body">
+
+{% if bookings %}
+
+<table class="table table-bordered table-hover text-center">
+
+<thead>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Persons</th>
+<th>Booking Date</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for booking in bookings %}
+
+<tr>
+
+<td>{{ booking.Name }}</td>
+<td>{{ booking.Email }}</td>
+<td>{{ booking.Total_person }}</td>
+<td>{{ booking.Booking_date }}</td>
+
+<td>
+
+<a href="{% url 'cancel_booking' booking.id %}"
+class="btn btn-danger"
+onclick="return confirm('Are you sure you want to cancel this booking?')">
+Cancel
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% else %}
+
+<div class="alert alert-warning text-center">
+
+No bookings found.
+
+</div>
+
+{% endif %}
+
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+
+<a href="/" class="btn btn-primary">Back to Home</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

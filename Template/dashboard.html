@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>User Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+background:#f4f6f9;
+font-family:Arial;
+}
+
+.dashboard-title{
+text-align:center;
+font-weight:700;
+margin-top:40px;
+margin-bottom:40px;
+color:#333;
+}
+
+.dashboard-title span{
+color:#17a2b8;
+}
+
+.card{
+border:none;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-card{
+padding:25px;
+text-align:center;
+}
+
+.profile-icon{
+font-size:50px;
+color:#17a2b8;
+margin-bottom:10px;
+}
+
+.stat-card{
+padding:25px;
+text-align:center;
+}
+
+.stat-number{
+font-size:38px;
+font-weight:bold;
+color:#007bff;
+}
+
+.btn-group-dashboard a{
+margin:5px;
+}
+
+.quick-card{
+padding:20px;
+text-align:center;
+}
+
+.quick-card i{
+font-size:30px;
+margin-bottom:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 class="dashboard-title">
+<span><i class="fa fa-user"></i></span>
+User Dashboard
+</h2>
+
+<div class="row">
+
+<!-- PROFILE -->
+
+<div class="col-md-4">
+
+<div class="card profile-card">
+
+<i class="fa fa-user-circle profile-icon"></i>
+
+<h4>{{ user.username }}</h4>
+
+<p class="text-muted">{{ user.email }}</p>
+
+</div>
+
+</div>
+
+<!-- BOOKINGS -->
+
+<div class="col-md-8">
+
+<div class="card stat-card">
+
+<h5>Total Table Bookings</h5>
+
+<div class="stat-number">
+{{ total_bookings }}
+</div>
+
+<hr>
+
+<div class="btn-group-dashboard">
+
+<a href="{% url 'my_bookings' %}" class="btn btn-info">
+<i class="fa fa-calendar"></i>
+My Bookings
+</a>
+
+<a href="{% url 'Home' %}" class="btn btn-secondary">
+<i class="fa fa-home"></i>
+Home
+</a>
+
+<a href="{% url 'logout' %}" class="btn btn-danger">
+<i class="fa fa-sign-out-alt"></i>
+Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<!-- QUICK ACTIONS -->
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card quick-card">
+
+<i class="fa fa-utensils text-warning"></i>
+
+<h5>Browse Menu</h5>
+
+<a href="{% url 'Menu' %}" class="btn btn-warning btn-sm mt-2">
+View Menu
+</a>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card quick-card">
+
+<i class="fa fa-table text-success"></i>
+
+<h5>Book Table</h5>
+
+<a href="{% url 'Book_Table' %}" class="btn btn-success btn-sm mt-2">
+Book Now
+</a>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card quick-card">
+
+<i class="fa fa-comment text-primary"></i>
+
+<h5>Give Feedback</h5>
+
+<a href="{% url 'Feedback_Form' %}" class="btn btn-primary btn-sm mt-2">
+Feedback
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
